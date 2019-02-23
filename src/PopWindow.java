@@ -9,16 +9,13 @@ import javax.swing.JPanel;
 
 public class PopWindow extends JFrame {
 	JFrame frame3;
-	public PopWindow() {
+
+	public void initialize(String q,int a,int b) {
 		frame3 = new JFrame();
-		frame3.setTitle("Information");
+		frame3.setTitle("Status");
 		frame3.setBounds(600, 300, 200, 120);
 		frame3.setVisible(true);
 		frame3.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-					
-	}
-
-	public void initialize(String q,int a,int b) {
 		
 		JPanel panel = new JPanel();
 		frame3.getContentPane().add(panel, BorderLayout.CENTER);
@@ -34,7 +31,7 @@ public class PopWindow extends JFrame {
 		panel.add(btnNewButton);
 		
 		JLabel lblUserName = new JLabel(q);
-		lblUserName.setBounds(a,b, 89, 23);
+		lblUserName.setBounds(a,b, 150, 23);
 		panel.add(lblUserName);
 		
 	}
